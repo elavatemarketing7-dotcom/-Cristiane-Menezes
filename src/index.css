@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-signature: "Great Vibes", cursive;
+
+  /* Editorial Aesthetic: Gold & Cream tones */
+  --color-gold-50: #f9f7f2;
+  --color-gold-100: #f1ead9;
+  --color-gold-200: #e4d7bd;
+  --color-gold-300: #d6c29e;
+  --color-gold-400: #c5a059; /* Precise Editorial Gold */
+  --color-gold-500: #a8823f;
+  --color-gold-600: #8b672e;
+  --color-gold-700: #6e4d20;
+  --color-gold-800: #503714;
+  --color-gold-900: #33220b;
+
+  --color-emerald-light: #e6f4f1;
+  --color-emerald-deep: #0e3d36;
+}
+
+@keyframes slow-marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: slow-marquee 30s linear infinite;
+}
+
+/* Custom styles for smooth experience and premium look */
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0f1013;
+}
+::-webkit-scrollbar-thumb {
+  background: #c29c58;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #af823b;
+}
+
+/* Custom pulse and glow for premium CTA and cards */
+.premium-glow {
+  box-shadow: 0 0 15px rgba(194, 156, 88, 0.15);
+}
+.premium-glow-button {
+  box-shadow: 0 4px 20px rgba(194, 156, 88, 0.35);
+  transition: all 0.3s ease;
+}
+.premium-glow-button:hover {
+  box-shadow: 0 6px 25px rgba(194, 156, 88, 0.55);
+}
+
